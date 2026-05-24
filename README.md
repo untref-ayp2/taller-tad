@@ -15,13 +15,17 @@ Repositorio complementario de la sección **Tipos Abstractos de Datos (TAD)** de
 02-pilas-colas/                 # ← capítulo 3-2
 └── ejercicios/
     └── 01-ejercicios/          # ejercicios que usan pilas y colas
+
+03-listas/                      # ← capítulo 3-3
+└── ejercicios/
+    └── 01-ejercicios/          # implementaciones y ejercicios con listas
 ```
 
-Cada directorio `ejercicios/` contiene un esqueleto incompleto y tests para que implementes la solución.
+Cada directorio `ejercicios/` contiene esqueletos incompletos y tests para que implementes la solución.
 
 ## Dependencias
 
-Los ejercicios de `02-pilas-colas/` importan las interfaces de
+Los ejercicios de `02-pilas-colas/` y `03-listas/` importan las interfaces de
 [data-structures](https://github.com/untref-ayp2/data-structures).
 Asegurate de tener el repositorio clonado en `../data-structures`
 (ver `go.mod` para el `replace`).
