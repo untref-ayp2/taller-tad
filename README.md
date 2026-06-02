@@ -19,14 +19,19 @@ Repositorio complementario de la sección **Tipos Abstractos de Datos (TAD)** de
 03-listas/                      # ← capítulo 3-3
 └── ejercicios/
     └── 01-ejercicios/          # implementaciones y ejercicios con listas
+
+04-mapa-de-bits/                # ← capítulo 3-4
+└── ejercicios/
+    ├── 01-lluvias/             # registro de lluvias con bitmap
+    └── 02-asistencia/          # registro de asistencias con bitmap
 ```
 
 Cada directorio `ejercicios/` contiene esqueletos incompletos y tests para que implementes la solución.
 
 ## Dependencias
 
-Los ejercicios de `02-pilas-colas/` y `03-listas/` importan las interfaces de
-[data-structures](https://github.com/untref-ayp2/data-structures).
+Los ejercicios de `02-pilas-colas/`, `03-listas/` y `04-mapa-de-bits/` importan
+las interfaces de [data-structures](https://github.com/untref-ayp2/data-structures).
 Asegurate de tener el repositorio clonado en `../data-structures`
 (ver `go.mod` para el `replace`).
 
@@ -46,7 +51,7 @@ go run ./01-tipos-abstractos-de-datos/ejemplos/contador
 Para correr los tests de un ejercicio:
 
 ```bash
-go test ./01-tipos-abstractos-de-datos/ejercicios/fraccion/...
+go test ./01-tipos-abstractos-de-datos/ejercicios/01-fraccion/...
 ```
 
 Para correr todos los tests:
