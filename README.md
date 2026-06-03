@@ -24,13 +24,19 @@ Repositorio complementario de la sección **Tipos Abstractos de Datos (TAD)** de
 └── ejercicios/
     ├── 01-lluvias/             # registro de lluvias con bitmap
     └── 02-asistencia/          # registro de asistencias con bitmap
+
+05-hashing/                     # ← capítulo 3-5
+└── ejercicios/
+    ├── 01-diccionario/         # traductor español-inglés
+    ├── 02-conteo-palabras/     # contador de frecuencias
+    └── 03-agenda/              # agenda de contactos
 ```
 
 Cada directorio `ejercicios/` contiene esqueletos incompletos y tests para que implementes la solución.
 
 ## Dependencias
 
-Los ejercicios de `02-pilas-colas/`, `03-listas/` y `04-mapa-de-bits/` importan
+Los ejercicios de `02-pilas-colas/`, `03-listas/`, `04-mapa-de-bits/` y `05-hashing/` importan
 las interfaces de [data-structures](https://github.com/untref-ayp2/data-structures).
 Asegurate de tener el repositorio clonado en `../data-structures`
 (ver `go.mod` para el `replace`).
