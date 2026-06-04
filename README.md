@@ -77,4 +77,5 @@ go test ./...
 
 ## Requisitos
 
-Go 1.22 o superior.
+- Go 1.22 o superior
+- Opcional: [golangci-lint](https://golangci-lint.run/) para linting local
