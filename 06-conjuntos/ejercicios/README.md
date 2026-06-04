@@ -1,8 +1,7 @@
 # Ejercicios: Conjuntos
 
-Antes de comenzar, implementá `MapSet`, `HashTableSet` y `OrderedSet` en tu
-repositorio [`data-structures`](https://github.com/untref-ayp2/data-structures)
-(el que se creó al aceptar la tarea en GitHub Classroom), paquete `set/`.
+Antes de comenzar, implementá `MapSet`, `HashTableSet` y `OrderedSet` en tu repositorio
+data-structures, paquete `set/`.
 
 Luego completá los siguientes ejercicios usando `Set[T]`:
 

@@ -9,8 +9,8 @@ Repositorio complementario de la sección **Tipos Abstractos de Datos (TAD)** de
 ├── ejemplos/
 │   └── contador/               # ejemplo resuelto del apunte
 └── ejercicios/
-    ├── fraccion/               # esqueleto con tests
-    └── reloj/                  # esqueleto con tests
+    ├── 01-fraccion/            # esqueleto con tests
+    └── 02-reloj/               # esqueleto con tests
 
 02-pilas-colas/                 # ← capítulo 3-2
 └── ejercicios/
@@ -42,10 +42,13 @@ Cada directorio `ejercicios/` contiene esqueletos incompletos y tests para que i
 
 ## Dependencias
 
-Los ejercicios de `02-pilas-colas/`, `03-listas/`, `04-mapa-de-bits/` y `05-hashing/` importan
-las interfaces de [data-structures](https://github.com/untref-ayp2/data-structures).
+Los ejercicios de `02-pilas-colas/`, `03-listas/`, `04-mapa-de-bits/`, `05-hashing/` y
+`06-conjuntos/` importan las interfaces de [data-structures](https://github.com/untref-ayp2/data-structures).
 Asegurate de tener el repositorio clonado en `../data-structures`
 (ver `go.mod` para el `replace`).
+
+`01-tipos-abstractos-de-datos` no depende de data-structures. Los capítulos que se agreguen
+en el futuro y dependan de él deben incluirse en esta lista.
 
 ## Cómo usar
 

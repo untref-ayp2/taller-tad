@@ -1,8 +1,7 @@
 # Ejercicios: Listas Enlazadas
 
 Antes de comenzar, implementá las cuatro variantes de lista en tu repositorio
-de [`data-structures`](https://github.com/untref-ayp2/data-structures)
-(el que se creó al aceptar la tarea en GitHub Classroom):
+data-structures:
 `SinglyLinkedList`, `DoublyLinkedList`, `CircularLinkedList` y `SentinelLinkedList`.
 
 Completá las siguientes funciones y tipos en este repositorio (`taller-tad`),

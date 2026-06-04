@@ -1,7 +1,7 @@
 # Ejercicios: Pilas y Colas
 
 Antes de comenzar, implementá `SliceStack[T]` y `SliceQueue[T]` en tu fork de
-[data-structures](https://github.com/untref-ayp2/data-structures).
+data-structures.
 
 Luego completá las siguientes funciones usando pilas y colas.
 

@@ -1,9 +1,6 @@
 # Ejercicios: Mapa de Bits
 
-Antes de comenzar, implementá `BitMap` en tu repositorio
-[`data-structures`](https://github.com/untref-ayp2/data-structures)
-(el que se creó al aceptar la tarea en GitHub Classroom),
-paquete `bitmap/`. El TAD debe soportar mapas de bits de 8, 32 y 64 bits.
+Antes de comenzar, implementá `BitMap` en tu repositorio data-structures, paquete `bitmap/`. El TAD debe soportar mapas de bits de 8, 32 y 64 bits.
 
 Luego completá los siguientes ejercicios usando `BitMap`:
 
