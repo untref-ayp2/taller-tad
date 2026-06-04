@@ -17,6 +17,8 @@ Luego completá los siguientes ejercicios usando `HashTable[string, V]`:
 Implementar un diccionario bilingüe español-inglés que permita traducir
 palabras y oraciones completas.
 
+**Valores**: pares español → inglés (clave `string`, valor `string`).
+
 **Operaciones**:
 
 - `NuevoDiccionario() *Diccionario` — crea un diccionario vacío
@@ -51,6 +53,8 @@ palabras y oraciones completas.
 
 Implementar un contador de frecuencias de palabras, similar a los que se usan
 en análisis de texto y motores de búsqueda.
+
+**Valores**: palabras con su frecuencia de aparición (clave `string`, valor `int`).
 
 **Operaciones**:
 
@@ -87,6 +91,8 @@ en análisis de texto y motores de búsqueda.
 
 Implementar una agenda de contactos que permita gestionar nombres, teléfonos
 y correos electrónicos.
+
+**Valores**: contactos identificados por nombre (clave `string`, valor `Contacto`).
 
 **Operaciones**:
 

@@ -10,7 +10,7 @@ usando las listas que implementaste en `data-structures`.
 
 ---
 
-### 01. StackList
+## 1. StackList
 
 Implementar una pila (`Stack[T]`) usando internamente `SinglyLinkedList[T]`. La
 pila debe respetar la interfaz `Stack[T]` definida en
@@ -18,7 +18,9 @@ pila debe respetar la interfaz `Stack[T]` definida en
 
 El tipo debe llamarse `StackList[T]` y su constructor `NewStackList[T]()`.
 
-### 02. QueueList
+---
+
+## 2. QueueList
 
 Implementar una cola (`Queue[T]`) usando internamente `SinglyLinkedList[T]`. La
 cola debe respetar la interfaz `Queue[T]` definida en
@@ -26,7 +28,9 @@ cola debe respetar la interfaz `Queue[T]` definida en
 
 El tipo debe llamarse `QueueList[T]` y su constructor `NewQueueList[T]()`.
 
-### 03. InvertirLista
+---
+
+## 3. InvertirLista
 
 Escribir una función que reciba una `List[T]` y devuelva un slice con los
 elementos en orden inverso.
@@ -37,7 +41,9 @@ func InvertirLista[T comparable](l list.List[T]) []T
 
 Ejemplo: si la lista contiene `[1, 2, 3]`, debe devolver `[3, 2, 1]`.
 
-### 04. MergeListas
+---
+
+## 4. MergeListas
 
 Escribir una función que dadas dos listas **ordenadas** devuelva una nueva lista
 con los elementos de ambas en orden (merge).
@@ -48,7 +54,9 @@ func MergeListas[T comparable](l1, l2 list.List[T]) list.List[T]
 
 Ejemplo: `l1 = [1, 3, 5]`, `l2 = [2, 4, 6]` → resultado `[1, 2, 3, 4, 5, 6]`.
 
-### 05. PlaylistCircular
+---
+
+## 5. PlaylistCircular
 
 Implementar un reproductor de música con repetición (`repeat`) usando una
 `CircularLinkedList`. Debe permitir:
@@ -60,7 +68,9 @@ Implementar un reproductor de música con repetición (`repeat`) usando una
 
 El tipo debe llamarse `Playlist` y su constructor `NewPlaylist()`.
 
-### 06. Josephus
+---
+
+## 6. Josephus
 
 Resolver el [problema de
 Josephus](https://es.wikipedia.org/wiki/Problema_de_Flavio_Josefo) usando una
@@ -75,7 +85,9 @@ func Josephus(n, k int) int
 
 Ejemplo: `Josephus(7, 3)` debe devolver `4`.
 
-### 07. UndoRedo
+---
+
+## 7. UndoRedo
 
 Implementar un historial de acciones con deshacer/rehacer usando una
 `DoublyLinkedList`. Debe permitir:
@@ -88,3 +100,5 @@ Implementar un historial de acciones con deshacer/rehacer usando una
 Cada acción es un string que describe la operación realizada.
 
 El tipo debe llamarse `UndoRedo` y su constructor `NewUndoRedo()`.
+
+→ `01-ejercicios/`
