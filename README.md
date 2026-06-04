@@ -30,6 +30,12 @@ Repositorio complementario de la sección **Tipos Abstractos de Datos (TAD)** de
     ├── 01-diccionario/         # traductor español-inglés
     ├── 02-conteo-palabras/     # contador de frecuencias
     └── 03-agenda/              # agenda de contactos
+
+06-conjuntos/                   # ← capítulo 3-6
+└── ejercicios/
+    ├── 01-afinidad/            # ranking por intereses compartidos
+    ├── 02-papers/              # buscador de papers por keywords
+    └── 03-directorios/         # fusión de directorios ordenados
 ```
 
 Cada directorio `ejercicios/` contiene esqueletos incompletos y tests para que implementes la solución.
