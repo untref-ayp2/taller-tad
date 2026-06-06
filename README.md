@@ -36,14 +36,19 @@ Repositorio complementario de la sección **Tipos Abstractos de Datos (TAD)** de
     ├── 01-afinidad/            # ranking por intereses compartidos
     ├── 02-papers/              # buscador de papers por keywords
     └── 03-directorios/         # fusión de directorios ordenados
+
+07-diccionarios/                # ← capítulo 3-7
+└── ejercicios/
+    ├── 01-stock/               # registro de stock de productos
+    └── 02-directorio/          # directorio con búsqueda inversa
 ```
 
 Cada directorio `ejercicios/` contiene esqueletos incompletos y tests para que implementes la solución.
 
 ## Dependencias
 
-Los ejercicios de `02-pilas-colas/`, `03-listas/`, `04-mapa-de-bits/`, `05-hashing/` y
-`06-conjuntos/` importan las interfaces de [data-structures](https://github.com/untref-ayp2/data-structures).
+Los ejercicios de `02-pilas-colas/`, `03-listas/`, `04-mapa-de-bits/`, `05-hashing/`,
+`06-conjuntos/` y `07-diccionarios/` importan las interfaces de [data-structures](https://github.com/untref-ayp2/data-structures).
 Asegurate de tener el repositorio clonado en `../data-structures`
 (ver `go.mod` para el `replace`).
 
