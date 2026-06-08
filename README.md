@@ -45,7 +45,13 @@ Repositorio complementario de la sección **Tipos Abstractos de Datos (TAD)** de
 08-arboles/                     # ← capítulo 3-8
 ├── parser/                     # parser de expresiones → árbol binario
 └── ejercicios/
-    └── 01-ejercicios/          # recorridos + evaluación de expresiones
+    ├── 01-ejercicios/          # recorridos + evaluación de expresiones
+    └── 01-altura/              # altura de árboles balanceado y degenerado
+
+09-abb/                         # ← capítulo 3-9 (ABB)
+└── ejercicios/
+    ├── 03-conjunto-ordenado/   # conjunto ordenado sobre ABB
+    └── 04-guia-telefonica/     # guía telefónica ordenada sobre ABB
 ```
 
 Cada directorio `ejercicios/` contiene esqueletos incompletos y tests para que implementes la solución.
@@ -53,7 +59,7 @@ Cada directorio `ejercicios/` contiene esqueletos incompletos y tests para que i
 ## Dependencias
 
 Los ejercicios de `02-pilas-colas/`, `03-listas/`, `04-mapa-de-bits/`, `05-hashing/`,
-`06-conjuntos/`, `07-diccionarios/` y `08-arboles/ejercicios/` importan las interfaces
+`06-conjuntos/`, `07-diccionarios/`, `08-arboles/` y `09-abb/` importan las interfaces
 de [data-structures](https://github.com/untref-ayp2/data-structures).
 Asegurate de tener el repositorio clonado en `../data-structures`
 (ver `go.mod` para el `replace`).
