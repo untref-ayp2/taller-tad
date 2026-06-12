@@ -52,6 +52,11 @@ Repositorio complementario de la sección **Tipos Abstractos de Datos (TAD)** de
 └── ejercicios/
     ├── 03-conjunto-ordenado/   # conjunto ordenado sobre ABB
     └── 04-guia-telefonica/     # guía telefónica ordenada sobre ABB
+
+10-monticulo-binario/           # ← capítulo 3-11
+└── ejercicios/
+    ├── 01-merge-listas/        # merge de K listas ordenadas con PQ
+    └── 02-triage/              # sistema de triage hospitalario con PQ
 ```
 
 Cada directorio `ejercicios/` contiene esqueletos incompletos y tests para que implementes la solución.
@@ -59,8 +64,8 @@ Cada directorio `ejercicios/` contiene esqueletos incompletos y tests para que i
 ## Dependencias
 
 Los ejercicios de `02-pilas-colas/`, `03-listas/`, `04-mapa-de-bits/`, `05-hashing/`,
-`06-conjuntos/`, `07-diccionarios/`, `08-arboles/` y `09-abb/` importan las interfaces
-de [data-structures](https://github.com/untref-ayp2/data-structures).
+`06-conjuntos/`, `07-diccionarios/`, `08-arboles/`, `09-abb/` y `10-monticulo-binario/`
+importan las interfaces de [data-structures](https://github.com/untref-ayp2/data-structures).
 Asegurate de tener el repositorio clonado en `../data-structures`
 (ver `go.mod` para el `replace`).
 
