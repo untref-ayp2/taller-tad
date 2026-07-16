@@ -94,8 +94,8 @@ func (p *parser) parseExpr() *tree.TreeNode[string] {
 		op := p.consume().val
 		right := p.parseTerm()
 		node := tree.NewTreeNode(op)
-		node.SetLeft(left)
-		node.SetRight(right)
+		node.Left = left
+		node.Right = right
 		left = node
 	}
 	return left
@@ -108,8 +108,8 @@ func (p *parser) parseTerm() *tree.TreeNode[string] {
 		op := p.consume().val
 		right := p.parseFactor()
 		node := tree.NewTreeNode(op)
-		node.SetLeft(left)
-		node.SetRight(right)
+		node.Left = left
+		node.Right = right
 		left = node
 	}
 	return left

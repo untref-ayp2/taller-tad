@@ -11,19 +11,19 @@ func checkTree(t *testing.T, node *tree.TreeNode[string], expectedVal string, ha
 	if node == nil {
 		t.Fatal("nodo es nil")
 	}
-	if node.Value() != expectedVal {
-		t.Errorf("esperaba valor %q, obtuve %q", expectedVal, node.Value())
+	if node.Value != expectedVal {
+		t.Errorf("esperaba valor %q, obtuve %q", expectedVal, node.Value)
 	}
-	if hasLeft && node.Left() == nil {
+	if hasLeft && node.Left == nil {
 		t.Errorf("nodo %q debería tener hijo izquierdo", expectedVal)
 	}
-	if !hasLeft && node.Left() != nil {
+	if !hasLeft && node.Left != nil {
 		t.Errorf("nodo %q no debería tener hijo izquierdo", expectedVal)
 	}
-	if hasRight && node.Right() == nil {
+	if hasRight && node.Right == nil {
 		t.Errorf("nodo %q debería tener hijo derecho", expectedVal)
 	}
-	if !hasRight && node.Right() != nil {
+	if !hasRight && node.Right != nil {
 		t.Errorf("nodo %q no debería tener hijo derecho", expectedVal)
 	}
 }
@@ -42,8 +42,8 @@ func TestParseSimpleSum(t *testing.T) {
 		t.Fatalf("error inesperado: %v", err)
 	}
 	checkTree(t, node, "+", true, true)
-	checkTree(t, node.Left(), "3", false, false)
-	checkTree(t, node.Right(), "4", false, false)
+	checkTree(t, node.Left, "3", false, false)
+	checkTree(t, node.Right, "4", false, false)
 }
 
 func TestParsePrecedence(t *testing.T) {
@@ -52,10 +52,10 @@ func TestParsePrecedence(t *testing.T) {
 		t.Fatalf("error inesperado: %v", err)
 	}
 	checkTree(t, node, "+", true, true)
-	checkTree(t, node.Left(), "3", false, false)
-	checkTree(t, node.Right(), "*", true, true)
-	checkTree(t, node.Right().Left(), "4", false, false)
-	checkTree(t, node.Right().Right(), "2", false, false)
+	checkTree(t, node.Left, "3", false, false)
+	checkTree(t, node.Right, "*", true, true)
+	checkTree(t, node.Right.Left, "4", false, false)
+	checkTree(t, node.Right.Right, "2", false, false)
 }
 
 func TestParseParentheses(t *testing.T) {
@@ -64,10 +64,10 @@ func TestParseParentheses(t *testing.T) {
 		t.Fatalf("error inesperado: %v", err)
 	}
 	checkTree(t, node, "*", true, true)
-	checkTree(t, node.Left(), "+", true, true)
-	checkTree(t, node.Left().Left(), "3", false, false)
-	checkTree(t, node.Left().Right(), "4", false, false)
-	checkTree(t, node.Right(), "2", false, false)
+	checkTree(t, node.Left, "+", true, true)
+	checkTree(t, node.Left.Left, "3", false, false)
+	checkTree(t, node.Left.Right, "4", false, false)
+	checkTree(t, node.Right, "2", false, false)
 }
 
 func TestParseComplex(t *testing.T) {
@@ -76,8 +76,8 @@ func TestParseComplex(t *testing.T) {
 		t.Fatalf("error inesperado: %v", err)
 	}
 	checkTree(t, node, "*", true, true)
-	checkTree(t, node.Left(), "+", true, true)
-	checkTree(t, node.Right(), "-", true, true)
+	checkTree(t, node.Left, "+", true, true)
+	checkTree(t, node.Right, "-", true, true)
 }
 
 func TestParseError(t *testing.T) {
