@@ -30,7 +30,7 @@ implementaciones sobre listas o tablas de hash.
 - ¿Cómo se compara con la implementación de `OrderedSet` sobre lista enlazada?
 - ¿Por qué `Valores()` no necesita ordenar explícitamente?
 
-→ `03-conjunto-ordenado/`
+→ `01-conjunto-ordenado/`
 
 ---
 
@@ -60,4 +60,4 @@ Compará esta implementación con la versión sobre tabla de hash del ejercicio
 - ¿En qué casos conviene usar una tabla de hash? ¿En cuáles un ABB?
 - ¿Cómo cambia la complejidad de `BuscarContacto` si la guía tiene 10 o 10.000 contactos?
 
-→ `04-guia-telefonica/`
+→ `02-guia-telefonica/`

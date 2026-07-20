@@ -88,4 +88,20 @@ func Evaluar(arbol *tree.TreeNode[string]) (int, error)
 
 ---
 
-→ `01-ejercicios/`
+→ `01-recorridos/`
+
+---
+
+## 3. Altura de árboles binarios
+
+Implementar dos funciones que construyan árboles específicos y devuelvan su altura:
+
+- `ArbolBalanceado()` — crear un árbol binario balanceado de 7 nodos (valores 1 a 7 en inorder) y devolver su altura.
+- `ArbolDegenerado()` — crear un árbol binario degenerado de 5 nodos (lista enlazada a derecha) y devolver su altura.
+
+**Preguntas:**
+
+- ¿Cuál es la altura mínima de un árbol binario con n nodos? ¿Y la máxima?
+- ¿Qué complejidad tienen las operaciones de búsqueda, inserción y eliminación en cada caso?
+
+→ `02-altura/`

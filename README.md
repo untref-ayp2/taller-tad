@@ -50,8 +50,12 @@ Repositorio complementario de la sección **Tipos Abstractos de Datos (TAD)** de
 
 09-abb/                         # ← capítulo 3-9 (ABB)
 └── ejercicios/
-    ├── 03-conjunto-ordenado/   # conjunto ordenado sobre ABB
-    └── 04-guia-telefonica/     # guía telefónica ordenada sobre ABB
+    ├── 01-conjunto-ordenado/   # conjunto ordenado sobre ABB
+    └── 02-guia-telefonica/     # guía telefónica ordenada sobre ABB
+
+10-arboles-balanceados/         # ← capítulo 3-10 (AVL)
+└── ejercicios/
+    └── README.md               # ejercicios de lápiz y papel
 
 10-monticulo-binario/           # ← capítulo 3-11
 └── ejercicios/
@@ -75,8 +79,14 @@ en el futuro y dependan de él deben incluirse en esta lista.
 ## Cómo usar
 
 ```bash
-git clone https://github.com/untref-ayp2/taller-tad.git
-cd taller-tad
+# Ejecutar todos los tests
+make test
+
+# Con detalle de cada caso
+make test-v
+
+# Tests de un ejercicio específico
+go test -v ./01-tipos-abstractos-de-datos/ejercicios/01-fraccion/...
 ```
 
 Para ejecutar un ejemplo:
@@ -85,25 +95,11 @@ Para ejecutar un ejemplo:
 go run ./01-tipos-abstractos-de-datos/ejemplos/contador
 ```
 
-Para correr los tests de un ejercicio:
+**Nota:** este repositorio depende de `data-structures`. Asegurate de tenerlo
+clonado en `../data-structures` (lo crea classroom50 automáticamente al aceptar
+ambas asignaciones).
 
-```bash
-go test ./01-tipos-abstractos-de-datos/ejercicios/01-fraccion/...
-```
-
-Para correr todos los tests:
-
-```bash
-make test
-```
-
-O con más detalle:
-
-```bash
-make test-v
-```
-
-Para más información sobre cómo trabajar, ver [CONTRIBUTING.md](CONTRIBUTING.md).
+Para más información, ver [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Requisitos
 

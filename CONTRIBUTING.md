@@ -12,11 +12,11 @@ Ejecutar los tests con detalle de cada caso:
 
 Ejecutar los tests de un paquete específico:
 
-    make test-pkg PKG=03-listas/ejercicios/01-ejercicios/...
+    make test-pkg PKG=03-listas/ejercicios/...
 
 Ejemplo — solo tests de listas:
 
-    make test-pkg PKG=03-listas/ejercicios/01-ejercicios/...
+    make test-pkg PKG=03-listas/ejercicios/...
 
 ## Feedback automático (CI)
 
@@ -28,7 +28,7 @@ Si algún test falla: se muestra una cruz roja — revisá el error, corregí el
 
 ## Tu repositorio tiene un PR "Feedback"
 
-Cuando empezaste la assignment, GitHub Classroom creó automáticamente un Pull Request
+Cuando aceptaste la asignación con classroom50, se creó automáticamente un Pull Request
 llamado **"Feedback"** en tu repositorio. Este PR es tu canal de comunicación con los docentes.
 
 **No cierres este PR. Si lo cerrás, perdés el canal de ayuda.**
@@ -101,6 +101,7 @@ El `replace` en el `go.mod` ya está configurado para resolver esto.
 07-diccionarios/                # capítulo 3-7
 08-arboles/                     # capítulo 3-8
 09-abb/                         # capítulo 3-9
+10-arboles-balanceados/         # capítulo 3-10
 10-monticulo-binario/           # capítulo 3-11
 ```
 
