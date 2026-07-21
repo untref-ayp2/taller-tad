@@ -1,6 +1,6 @@
 # Ejercicios: Mapa de Bits
 
-Antes de comenzar, implementá `BitMap` en tu repositorio data-structures, paquete `bitmap/`. El TAD debe soportar mapas de bits de 8, 32 y 64 bits.
+Antes de comenzar, implementá `BitMap` en `data-structures/`, paquete `bitmap/`. El TAD debe soportar mapas de bits de 8, 32 y 64 bits.
 
 Luego completá los siguientes ejercicios usando `BitMap`:
 

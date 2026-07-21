@@ -16,12 +16,7 @@ jobs:
         with:
           go-version: "1.22"
 
-      # taller-tad depende de data-structures via replace en go.mod
-      # checkout como sibling para que la directiva funcione
-      - uses: actions/checkout@v4
-        with:
-          repository: untref-ayp2/data-structures
-          path: ../data-structures
+      # data-structures/ está incluido como subdirectorio del repo
 
       - name: Lint
         uses: golangci/golangci-lint-action@v6

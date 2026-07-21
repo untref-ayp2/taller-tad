@@ -5,6 +5,20 @@ Repositorio complementario de la sección **Tipos Abstractos de Datos (TAD)** de
 ## Estructura
 
 ```
+data-structures/                # implementaciones de Stack[T], Queue[T], List[T], etc.
+├── stack/                      # pilas (slice y lista enlazada)
+├── queue/                      # colas (slice y lista enlazada)
+├── list/                       # listas enlazadas (simple, doble, centinela, circular)
+├── bitmap/                     # mapa de bits
+├── hashtable/                  # tablas de hash (encadenamiento y open addressing)
+├── set/                        # conjuntos (map, hashtable, ordenado)
+├── dictionary/                 # diccionario (wrapper de hashtable)
+├── heap/                       # montículo binario (min y max)
+├── priorityqueue/              # cola de prioridad (wrapper de heap)
+├── tree/                       # árbol binario con recorridos
+├── binarysearchtree/           # árbol binario de búsqueda
+└── avltree/                    # árbol AVL
+
 01-tipos-abstractos-de-datos/   # ← capítulo 3-1
 ├── ejemplos/
 │   └── contador/               # ejemplo resuelto del apunte
@@ -64,22 +78,24 @@ Repositorio complementario de la sección **Tipos Abstractos de Datos (TAD)** de
 ```
 
 Cada directorio `ejercicios/` contiene esqueletos incompletos y tests para que implementes la solución.
+El directorio `data-structures/` contiene las interfaces y esqueletos que los ejercicios importan.
 
 ## Dependencias
 
-Los ejercicios de `02-pilas-colas/`, `03-listas/`, `04-mapa-de-bits/`, `05-hashing/`,
-`06-conjuntos/`, `07-diccionarios/`, `08-arboles/`, `09-abb/` y `10-monticulo-binario/`
-importan las interfaces de [data-structures](https://github.com/untref-ayp2/data-structures).
-Asegurate de tener el repositorio clonado en `../data-structures`
-(ver `go.mod` para el `replace`).
+`data-structures/` viene incluido como subdirectorio de este repositorio.
+Los ejercicios lo importan mediante `replace` en `go.mod`:
 
-`01-tipos-abstractos-de-datos` no depende de data-structures. Los capítulos que se agreguen
-en el futuro y dependan de él deben incluirse en esta lista.
+```
+require github.com/untref-ayp2/data-structures v0.0.0
+replace github.com/untref-ayp2/data-structures => ./data-structures
+```
+
+No necesitás clonar nada aparte.
 
 ## Cómo usar
 
 ```bash
-# Ejecutar todos los tests
+# Ejecutar todos los tests (data-structures + ejercicios)
 make test
 
 # Con detalle de cada caso
@@ -94,10 +110,6 @@ Para ejecutar un ejemplo:
 ```bash
 go run ./01-tipos-abstractos-de-datos/ejemplos/contador
 ```
-
-**Nota:** este repositorio depende de `data-structures`. Asegurate de tenerlo
-clonado en `../data-structures` (lo crea classroom50 automáticamente al aceptar
-ambas asignaciones).
 
 Para más información, ver [CONTRIBUTING.md](CONTRIBUTING.md).
 

@@ -1,7 +1,7 @@
 # Ejercicios: Diccionarios
 
-Antes de comenzar, implementá `HashMapDictionary` en tu repositorio
-data-structures, paquete `dictionary/`.
+Antes de comenzar, implementá `HashMapDictionary` en `data-structures/`,
+paquete `dictionary/`.
 
 Luego completá los siguientes ejercicios usando `Dictionary[K, V]`:
 

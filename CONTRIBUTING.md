@@ -73,12 +73,8 @@ No necesitás hacer nada especial — el PR se actualiza solo.
 
 ## Dependencia con data-structures
 
-Este repositorio importa las interfaces de
-[data-structures](https://github.com/untref-ayp2/data-structures) (Stack, Queue, List, etc.).
-
-En CI esto funciona automáticamente. Para desarrollo local, necesitás que
-`../data-structures` exista (es decir, clonar data-structures como sibling de taller-tad).
-El `replace` en el `go.mod` ya está configurado para resolver esto.
+`data-structures/` (Stack, Queue, List, etc.) viene incluido como subdirectorio de este repositorio.
+No necesitás clonarlo aparte. El `replace` en el `go.mod` apunta a `./data-structures`.
 
 ## Convenciones de código
 
@@ -117,6 +113,5 @@ El `replace` en el `go.mod` ya está configurado para resolver esto.
 ## Requisitos
 
 - Go 1.22 o superior.
-- Para desarrollo local: que `../data-structures` exista (clonado como sibling).
 - Opcional: golangci-lint (https://golangci-lint.run/) para verificar estilo
   localmente.

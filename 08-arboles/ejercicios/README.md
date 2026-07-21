@@ -1,7 +1,7 @@
 # Ejercicios: Árboles Binarios
 
-Antes de comenzar, implementá `TreeNode[T]` en tu fork de data-structures
-(paquete `tree/`).
+Antes de comenzar, implementá `TreeNode[T]` en `data-structures/`,
+paquete `tree/`.
 
 Luego completá las siguientes funciones.
 

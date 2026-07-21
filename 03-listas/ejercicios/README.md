@@ -1,7 +1,6 @@
 # Ejercicios: Listas Enlazadas
 
-Antes de comenzar, implementá las cuatro variantes de lista en tu repositorio
-data-structures:
+Antes de comenzar, implementá las cuatro variantes de lista en `data-structures/`:
 `SinglyLinkedList`, `DoublyLinkedList`, `CircularLinkedList` y `SentinelLinkedList`.
 
 Completá las siguientes funciones y tipos en este repositorio (`taller-tad`),

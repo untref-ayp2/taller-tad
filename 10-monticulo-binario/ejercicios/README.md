@@ -1,6 +1,6 @@
 # Ejercicios: Montículo Binario y Cola de Prioridad
 
-Antes de comenzar, implementá `heap` y `priorityqueue` en tu repositorio data-structures.
+Antes de comenzar, implementá `heap` y `priorityqueue` en `data-structures/`.
 
 ---
 

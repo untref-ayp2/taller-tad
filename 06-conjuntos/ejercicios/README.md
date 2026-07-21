@@ -1,7 +1,7 @@
 # Ejercicios: Conjuntos
 
-Antes de comenzar, implementá `MapSet`, `HashTableSet` y `OrderedSet` en tu repositorio
-data-structures, paquete `set/`.
+Antes de comenzar, implementá `MapSet`, `HashTableSet` y `OrderedSet` en `data-structures/`,
+paquete `set/`.
 
 Luego completá los siguientes ejercicios usando `Set[T]`:
 

@@ -1,6 +1,6 @@
 # Ejercicios: Árbol Binario de Búsqueda
 
-Antes de comenzar, implementá `BinarySearchTree[T]` en tu repositorio data-structures.
+Antes de comenzar, implementá `BinarySearchTree[T]` en `data-structures/`.
 
 ---
 
