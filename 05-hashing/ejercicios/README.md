@@ -1,7 +1,10 @@
 # Ejercicios: Tablas de Hash
 
-Antes de comenzar, implementá `HashTableOpenAddressing` y `HashTableChaining`
-en `data-structures/`, paquete `hashtable/`. Para la función de _hash_ con `K comparable` podés usar
+Antes de comenzar: `HashTableOpenAddressing` (hashing cerrado con sondeo lineal)
+ya viene implementado en `data-structures/hashtable/` como referencia.
+Solo tenés que implementar `HashTableChaining` (hashing abierto con encadenamiento).
+
+Para la función de _hash_ con `K comparable` podés usar
 el paquete [`hash/maphash`](https://pkg.go.dev/hash/maphash) de la biblioteca
 estándar de Go.
 

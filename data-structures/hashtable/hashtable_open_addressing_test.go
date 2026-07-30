@@ -5,7 +5,7 @@ import (
 )
 
 func TestOpenAddressingPutAndGet(t *testing.T) {
-	ht := NewHashTableOpenAddressing[string, int]()
+	ht := NewHashTableOpenAddressing[string, int](0, 0)
 	ht.Put("uno", 1)
 	ht.Put("dos", 2)
 	ht.Put("tres", 3)
@@ -36,7 +36,7 @@ func TestOpenAddressingPutAndGet(t *testing.T) {
 }
 
 func TestOpenAddressingGetNonExistent(t *testing.T) {
-	ht := NewHashTableOpenAddressing[string, int]()
+	ht := NewHashTableOpenAddressing[string, int](0, 0)
 	_, err := ht.Get("inexistente")
 	if err == nil {
 		t.Error("esperaba error al obtener clave inexistente")
@@ -44,7 +44,7 @@ func TestOpenAddressingGetNonExistent(t *testing.T) {
 }
 
 func TestOpenAddressingUpdateExisting(t *testing.T) {
-	ht := NewHashTableOpenAddressing[string, int]()
+	ht := NewHashTableOpenAddressing[string, int](0, 0)
 	ht.Put("clave", 10)
 	ht.Put("clave", 20)
 
@@ -58,7 +58,7 @@ func TestOpenAddressingUpdateExisting(t *testing.T) {
 }
 
 func TestOpenAddressingDelete(t *testing.T) {
-	ht := NewHashTableOpenAddressing[string, int]()
+	ht := NewHashTableOpenAddressing[string, int](0, 0)
 	ht.Put("a", 1)
 	ht.Put("b", 2)
 
@@ -82,7 +82,7 @@ func TestOpenAddressingDelete(t *testing.T) {
 }
 
 func TestOpenAddressingDeleteNonExistent(t *testing.T) {
-	ht := NewHashTableOpenAddressing[string, int]()
+	ht := NewHashTableOpenAddressing[string, int](0, 0)
 	err := ht.Delete("inexistente")
 	if err == nil {
 		t.Error("esperaba error al eliminar clave inexistente")
@@ -90,7 +90,7 @@ func TestOpenAddressingDeleteNonExistent(t *testing.T) {
 }
 
 func TestOpenAddressingContains(t *testing.T) {
-	ht := NewHashTableOpenAddressing[string, int]()
+	ht := NewHashTableOpenAddressing[string, int](0, 0)
 	ht.Put("clave", 42)
 
 	if !ht.Contains("clave") {
@@ -102,7 +102,7 @@ func TestOpenAddressingContains(t *testing.T) {
 }
 
 func TestOpenAddressingSizeAndIsEmpty(t *testing.T) {
-	ht := NewHashTableOpenAddressing[string, int]()
+	ht := NewHashTableOpenAddressing[string, int](0, 0)
 
 	if !ht.IsEmpty() {
 		t.Error("esperaba tabla vacía recién creada")
@@ -128,7 +128,7 @@ func TestOpenAddressingSizeAndIsEmpty(t *testing.T) {
 }
 
 func TestOpenAddressingKeys(t *testing.T) {
-	ht := NewHashTableOpenAddressing[string, int]()
+	ht := NewHashTableOpenAddressing[string, int](0, 0)
 	ht.Put("a", 1)
 	ht.Put("b", 2)
 	ht.Put("c", 3)
@@ -148,7 +148,7 @@ func TestOpenAddressingKeys(t *testing.T) {
 }
 
 func TestOpenAddressingValues(t *testing.T) {
-	ht := NewHashTableOpenAddressing[string, int]()
+	ht := NewHashTableOpenAddressing[string, int](0, 0)
 	ht.Put("a", 10)
 	ht.Put("b", 20)
 
@@ -167,7 +167,7 @@ func TestOpenAddressingValues(t *testing.T) {
 }
 
 func TestOpenAddressingClear(t *testing.T) {
-	ht := NewHashTableOpenAddressing[string, int]()
+	ht := NewHashTableOpenAddressing[string, int](0, 0)
 	ht.Put("a", 1)
 	ht.Put("b", 2)
 	ht.Clear()
@@ -181,7 +181,7 @@ func TestOpenAddressingClear(t *testing.T) {
 }
 
 func TestOpenAddressingString(t *testing.T) {
-	ht := NewHashTableOpenAddressing[string, int]()
+	ht := NewHashTableOpenAddressing[string, int](0, 0)
 	ht.Put("a", 1)
 	ht.Put("b", 2)
 
@@ -196,7 +196,7 @@ func TestOpenAddressingString(t *testing.T) {
 }
 
 func TestOpenAddressingCollision(t *testing.T) {
-	ht := NewHashTableOpenAddressing[int, string]()
+	ht := NewHashTableOpenAddressing[int, string](0, 0)
 
 	// Insertar varios elementos para forzar colisiones
 	for i := 0; i < 10; i++ {
@@ -215,7 +215,7 @@ func TestOpenAddressingCollision(t *testing.T) {
 }
 
 func TestOpenAddressingResize(t *testing.T) {
-	ht := NewHashTableOpenAddressing[int, int]()
+	ht := NewHashTableOpenAddressing[int, int](0, 0)
 
 	// Insertar suficientes elementos para forzar redimension
 	for i := 0; i < 100; i++ {
@@ -238,7 +238,7 @@ func TestOpenAddressingResize(t *testing.T) {
 }
 
 func TestOpenAddressingKeysEmpty(t *testing.T) {
-	ht := NewHashTableOpenAddressing[string, int]()
+	ht := NewHashTableOpenAddressing[string, int](0, 0)
 	keys := ht.Keys()
 	if keys == nil {
 		t.Error("Keys no debe devolver nil para tabla vacía")
@@ -249,7 +249,7 @@ func TestOpenAddressingKeysEmpty(t *testing.T) {
 }
 
 func TestOpenAddressingValuesEmpty(t *testing.T) {
-	ht := NewHashTableOpenAddressing[string, int]()
+	ht := NewHashTableOpenAddressing[string, int](0, 0)
 	values := ht.Values()
 	if values == nil {
 		t.Error("Values no debe devolver nil para tabla vacía")

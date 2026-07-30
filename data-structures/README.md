@@ -11,9 +11,9 @@ queue/       # interface Queue[T] + SliceQueue[T] + QueueList[T] + tests
 list/        # interface List[T] + SinglyLinkedList + DoublyLinkedList +
              #   SentinelLinkedList + CircularLinkedList + tests
 bitmap/      # BitMap (8/32/64 bits) + tests
-hashtable/   # interface HashTable[K, V] + HashTableOpenAddressing +
-             #   HashTableChaining + tests (usar hash/maphash para
-             #   la función de hash con K comparable)
+hashtable/   # interface HashTable[K, V] + HashTableOpenAddressing
+             #   (implementado como referencia) + HashTableChaining (stub
+             #   para completar) + tests
 set/         # interface Set[T] + MapSet[T] + HashTableSet[T] + OrderedSet[T] + tests
 dictionary/  # interface Dictionary[K, V] + HashMapDictionary[K, V] + tests
 heap/        # interface Heap[T] + SliceHeap[T] (min/max) + tests

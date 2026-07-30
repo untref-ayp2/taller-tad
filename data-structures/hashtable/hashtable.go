@@ -1,9 +1,12 @@
 package hashtable
 
-// HashTable es la interfaz que deben implementar todas las tablas de hash.
+// HashTable define el contrato que deben implementar las tablas de hash.
+//
+// K debe ser un tipo comparable (puede usarse como clave en un map de Go).
+// V puede ser cualquier tipo.
 type HashTable[K comparable, V any] interface {
-	// Put agrega un nuevo par clave-valor. Si la clave ya existe,
-	// actualiza el valor asociado.
+	// Put agrega un nuevo par clave-valor. Si la clave ya existe, actualiza
+	// el valor asociado.
 	Put(key K, value V)
 	// Get devuelve el valor asociado a la clave.
 	// Error si la clave no existe.

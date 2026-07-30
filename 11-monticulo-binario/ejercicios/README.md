@@ -4,9 +4,29 @@ Antes de comenzar, implementá `heap` y `priorityqueue` en `data-structures/`.
 
 ---
 
-## 1. Merge de K listas ordenadas
+## 1. Cola de Prioridad de Personas
 
-Dadas K listas enlazadas ordenadas, fusionarlas en una única lista ordenada utilizando una cola de prioridad.
+Implementar una cola de prioridad de personas donde la prioridad se define por
+la edad (mayor edad = mayor prioridad). A igual edad, se respeta el orden de
+llegada. Usar un `MaxHeap` de `data-structures/heap`.
+
+**Operaciones**:
+
+- `NuevaColaPrioridad() *ColaPrioridad` — crea una cola vacía.
+- `Agregar(p Persona)` — agrega una persona.
+- `Atender() (Persona, error)` — elimina y devuelve la de mayor prioridad.
+- `Siguiente() (Persona, error)` — devuelve la de mayor prioridad sin eliminarla.
+- `Cantidad() int` — cantidad de personas en la cola.
+- `EstaVacia() bool` — true si no hay personas.
+
+→ `01-cola-prioridad/`
+
+---
+
+## 2. Merge de K listas ordenadas
+
+Dadas K listas enlazadas ordenadas, fusionarlas en una única lista ordenada
+utilizando una cola de prioridad.
 
 **Estrategia**:
 
@@ -26,13 +46,15 @@ Dadas K listas enlazadas ordenadas, fusionarlas en una única lista ordenada uti
 - ¿Qué complejidad temporal tiene el algoritmo si hay N elementos totales y K listas?
 - ¿Qué pasa si una o más listas están vacías?
 
-→ `01-merge-listas/`
+→ `02-merge-listas/`
 
 ---
 
-## 2. Sistema de triage hospitalario
+## 3. Sistema de triage hospitalario
 
-Un hospital recibe pacientes con distintos niveles de gravedad (1 = más grave, 5 = menos grave). Se debe implementar una función que determine el orden de atención utilizando una cola de prioridad.
+Un hospital recibe pacientes con distintos niveles de gravedad (1 = más grave,
+5 = menos grave). Se debe implementar una función que determine el orden de
+atención utilizando una cola de prioridad.
 
 **Reglas**:
 
@@ -52,4 +74,4 @@ Un hospital recibe pacientes con distintos niveles de gravedad (1 = más grave, 
 - ¿Usaste un min-heap o un max-heap? ¿Por qué?
 - ¿Qué complejidad temporal tiene atender a N pacientes?
 
-→ `02-triage/`
+→ `03-triage/`

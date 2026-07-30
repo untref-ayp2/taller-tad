@@ -60,3 +60,50 @@ Ejemplo: entrada `[1, 2, 3]`, salida `[3, 2, 1]` → `true`
          entrada `[1, 2, 3]`, salida `[3, 1, 2]` → `false`
 
 → `01-ejercicios/`
+
+---
+
+## 7. ColaCircular
+
+Implementar una cola circular genérica (`ColaCircular[T]`) sobre un arreglo de
+tamaño fijo, también conocida como *ring buffer*.
+
+A diferencia de `SliceQueue[T]`, esta cola:
+
+- Tiene una capacidad máxima fija definida al crearla.
+- Reutiliza el espacio del arreglo cuando se extraen elementos (el frente y el
+  final "dan la vuelta").
+- La operación `Dequeue` es $O(1)$ real (no desplaza elementos como el slice).
+
+### Métodos requeridos
+
+`NewColaCircular[T](capacidad int) *ColaCircular[T]`
+: Crea una cola circular vacía con la capacidad indicada.
+
+`Enqueue(val T) error`
+: Agrega un elemento al final. Error si la cola está llena.
+
+`Dequeue() (T, error)`
+: Extrae y devuelve el elemento del frente. Error si la cola está vacía.
+
+`Front() (T, error)`
+: Devuelve el elemento del frente sin extraerlo. Error si la cola está vacía.
+
+`IsEmpty() bool`
+: Devuelve `true` si la cola no tiene elementos.
+
+`IsFull() bool`
+: Devuelve `true` si la cola alcanzó su capacidad máxima.
+
+`Size() int`
+: Devuelve la cantidad de elementos actualmente en la cola.
+
+### Pistas
+
+- Usá un *slice* de tamaño fijo como almacenamiento subyacente.
+- Mantené dos índices: `front` (frente) y `rear` (final). Inicializá `rear` en `-1`.
+- Para avanzar un índice de forma circular: `(indice + 1) % capacidad`.
+- La cola está vacía cuando `size == 0` y llena cuando `size == capacidad`.
+- No es necesario "limpiar" las celdas al hacer `Dequeue`; basta con avanzar `front` y decrementar `size`.
+
+→ `02-cola-circular/`

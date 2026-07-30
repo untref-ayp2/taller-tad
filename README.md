@@ -28,7 +28,8 @@ data-structures/                # implementaciones de Stack[T], Queue[T], List[T
 
 02-pilas-colas/                 # ← capítulo 3-2
 └── ejercicios/
-    └── 01-ejercicios/          # ejercicios que usan pilas y colas
+    ├── 01-ejercicios/          # ejercicios que usan pilas y colas
+    └── 02-cola-circular/       # cola circular sobre arreglo de tamaño fijo
 
 03-listas/                      # ← capítulo 3-3
 └── ejercicios/
@@ -59,8 +60,8 @@ data-structures/                # implementaciones de Stack[T], Queue[T], List[T
 08-arboles/                     # ← capítulo 3-8
 ├── parser/                     # parser de expresiones → árbol binario
 └── ejercicios/
-    ├── 01-ejercicios/          # recorridos + evaluación de expresiones
-    └── 01-altura/              # altura de árboles balanceado y degenerado
+    ├── 01-recorridos/          # recorridos + evaluación de expresiones
+    └── 02-altura/              # altura de árboles balanceado y degenerado
 
 09-abb/                         # ← capítulo 3-9 (ABB)
 └── ejercicios/
@@ -71,10 +72,11 @@ data-structures/                # implementaciones de Stack[T], Queue[T], List[T
 └── ejercicios/
     └── README.md               # ejercicios de lápiz y papel
 
-10-monticulo-binario/           # ← capítulo 3-11
+11-monticulo-binario/           # ← capítulo 3-11
 └── ejercicios/
-    ├── 01-merge-listas/        # merge de K listas ordenadas con PQ
-    └── 02-triage/              # sistema de triage hospitalario con PQ
+    ├── 01-cola-prioridad/      # cola de prioridad de personas con MaxHeap
+    ├── 02-merge-listas/        # merge de K listas ordenadas con PQ
+    └── 03-triage/              # sistema de triage hospitalario con PQ
 ```
 
 Cada directorio `ejercicios/` contiene esqueletos incompletos y tests para que implementes la solución.
