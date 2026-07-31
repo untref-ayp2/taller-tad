@@ -1,7 +1,12 @@
 package ejercicios
 
 import (
+	// "strconv"   // Atoi, ErrSyntax — convertir strings a enteros
+	// "strings"  // Builder (construir strings eficientemente), Split (tokenizar)
+	// "unicode"  // IsLetter, IsDigit, ToLower — filtrar y normalizar caracteres
+
 	"github.com/untref-ayp2/data-structures/queue"
+	// "github.com/untref-ayp2/data-structures/stack"
 )
 
 // InvertirCadena recibe una cadena y devuelve la cadena invertida usando una pila.

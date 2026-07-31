@@ -44,3 +44,15 @@ func (r *Reloj) Segundo() int {
 func (r *Reloj) String() string {
 	return ""
 }
+
+// === PREGUNTAS TEÓRICAS ===
+// Respondé justificando brevemente.
+
+// 1. En AvanzarUnSegundo(), cuando se pasa de 23:59:59 a 00:00:00,
+//    ¿hay algún momento en que el invariante no se cumpla?
+//
+// RESPUESTA:
+
+// 2. ¿Cómo harías para que la primitiva sea atómica?
+//
+// RESPUESTA:

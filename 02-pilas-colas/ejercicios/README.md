@@ -51,13 +51,34 @@ Operadores válidos: `+`, `-`, `*`, `/`.
 
 ## 6. EsPosibleConPila
 
-Dadas dos secuencias de números enteros (entrada y salida),
-determinar si es posible transformar la secuencia de entrada en la secuencia
-de salida usando una pila. Es el problema clásico de ordenamiento con pila
-(*stack sorting*).
+Dadas dos secuencias de enteros (entrada y salida), determinar si es posible
+obtener la secuencia de salida a partir de la de entrada usando únicamente una
+pila. Las operaciones permitidas son:
 
-Ejemplo: entrada `[1, 2, 3]`, salida `[3, 2, 1]` → `true`
-         entrada `[1, 2, 3]`, salida `[3, 1, 2]` → `false`
+- **Push**: tomar el próximo elemento de la entrada y apilarlo.
+- **Pop**: desapilar el tope de la pila y agregarlo al final de la salida.
+
+Ambas operaciones pueden intercalarse libremente.
+
+**Ejemplo detallado**: entrada `[1, 2, 3]`, salida `[2, 1, 3]` → `true`
+
+| Paso | Entrada  | Pila   | Salida    | Acción  |
+|------|----------|--------|-----------|---------|
+| 1    | [1,2,3]  | []     | []        | Push 1  |
+| 2    | [2,3]    | [1]    | []        | Push 2  |
+| 3    | [3]      | [1,2]  | []        | Pop → 2 |
+| 4    | [3]      | [1]    | [2]       | Pop → 1 |
+| 5    | [3]      | []     | [2,1]     | Push 3  |
+| 6    | []       | [3]    | [2,1]     | Pop → 3 |
+| 7    | []       | []     | [2,1,3]   | ✓        |
+
+**Contraejemplo**: entrada `[1, 2, 3]`, salida `[3, 1, 2]` → `false`
+(no hay forma de que 1 salga antes que 2 si 3 ya salió primero).
+
+**Pista**: simulá el proceso elemento por elemento. Recorré la entrada, apilando
+cada valor. Después de cada push, mientras el tope de la pila coincida con el
+próximo elemento esperado en la salida, hacé pop y avanzá. Si al finalizar la
+entrada vaciaste la pila y consumiste toda la salida, es posible.
 
 → `01-ejercicios/`
 
@@ -106,4 +127,33 @@ A diferencia de `SliceQueue[T]`, esta cola:
 - La cola está vacía cuando `size == 0` y llena cuando `size == capacidad`.
 - No es necesario "limpiar" las celdas al hacer `Dequeue`; basta con avanzar `front` y decrementar `size`.
 
+### Ejemplo detallado: capacidad 3
+
+| Paso | [0] | [1] | [2] | front | rear | size | Acción |
+|------|-----|-----|-----|-------|------|------|--------|
+| 0    | —   | —   | —   | 0     | -1   | 0    | `NewColaCircular[int](3)` |
+| 1    | 1   | —   | —   | 0     | 0    | 1    | `Enqueue(1)` |
+| 2    | 1   | 2   | —   | 0     | 1    | 2    | `Enqueue(2)` |
+| 3    | 1   | 2   | 3   | 0     | 2    | 3    | `Enqueue(3)` — llena |
+| 4    | —   | 2   | 3   | 1     | 2    | 2    | `Dequeue()` → 1 |
+| 5    | —   | —   | 3   | 2     | 2    | 1    | `Dequeue()` → 2 |
+| 6    | 4   | —   | 3   | 2     | 0    | 2    | `Enqueue(4)` — rear da la vuelta |
+| 7    | 4   | 5   | 3   | 2     | 1    | 3    | `Enqueue(5)` — llena otra vez |
+
+En el paso 6, `rear` pasa de 2 a 0 (porque `(2 + 1) % 3 = 0`): ahí se ve el
+comportamiento circular. Los siguientes `Dequeue()` devuelven 3, 4, 5 en orden.
+
 → `02-cola-circular/`
+
+---
+
+## Recursos de la biblioteca estándar
+
+Para resolver estos ejercicios vas a necesitar algunos paquetes de la
+biblioteca estándar de Go. Investigalos por tu cuenta:
+
+| Paquete | ¿Para qué sirve? | Funciones clave |
+|---|---|---|
+| `strings` | Manipulación eficiente de cadenas | `Builder` (construir strings en loops), `Split` (tokenizar) |
+| `strconv` | Conversión entre strings y números | `Atoi` (string a int), `Itoa` (int a string) |
+| `unicode` | Clasificación y transformación de caracteres | `IsLetter`, `IsDigit`, `ToLower` |

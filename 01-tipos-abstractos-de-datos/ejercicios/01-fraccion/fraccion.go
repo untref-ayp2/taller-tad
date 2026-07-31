@@ -61,3 +61,15 @@ func mcd(a, b int) int {
 // TODO: implementar
 func (f *Fraccion) simplificar() {
 }
+
+// === PREGUNTAS TEÓRICAS ===
+// Respondé justificando brevemente.
+
+// 1. ¿En qué momento de las operaciones podría no cumplirse el invariante
+//    de que la fracción esté siempre simplificada?
+//
+// RESPUESTA:
+
+// 2. ¿Cómo garantizás la atomicidad en cada primitiva?
+//
+// RESPUESTA:
