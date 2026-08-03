@@ -86,3 +86,9 @@ clases.
   un `[][]bool`?
 
 → `02-asistencia/`
+
+---
+
+**Nota para el alumno**: las respuestas a las preguntas teóricas deben
+incluirse como comentarios al final del archivo `.go` de implementación, en un
+bloque encabezado con `// === PREGUNTAS TEÓRICAS ===`.

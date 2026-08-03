@@ -96,3 +96,9 @@ type Contacto struct {
 - ¿Por qué es necesario mantener dos diccionarios en lugar de uno solo?
 
 → `02-directorio/`
+
+---
+
+**Nota para el alumno**: las respuestas a las preguntas teóricas deben
+incluirse como comentarios al final del archivo `.go` de implementación, en un
+bloque encabezado con `// === PREGUNTAS TEÓRICAS ===`.

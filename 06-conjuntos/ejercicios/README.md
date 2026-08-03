@@ -108,3 +108,9 @@ empleados. Se necesita unificar la información usando conjuntos ordenados.
   de `OrderedSet`?
 
 → `03-directorios/`
+
+---
+
+**Nota para el alumno**: las respuestas a las preguntas teóricas deben
+incluirse como comentarios al final del archivo `.go` de implementación, en un
+bloque encabezado con `// === PREGUNTAS TEÓRICAS ===`.

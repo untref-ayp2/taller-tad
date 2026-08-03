@@ -61,3 +61,9 @@ Compará esta implementación con la versión sobre tabla de hash del ejercicio
 - ¿Cómo cambia la complejidad de `BuscarContacto` si la guía tiene 10 o 10.000 contactos?
 
 → `02-guia-telefonica/`
+
+---
+
+**Nota para el alumno**: las respuestas a las preguntas teóricas deben
+incluirse como comentarios al final del archivo `.go` de implementación, en un
+bloque encabezado con `// === PREGUNTAS TEÓRICAS ===`.

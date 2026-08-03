@@ -60,3 +60,9 @@ Implementar un TAD `Reloj` que represente la hora del día en formato de 24 hora
 - ¿Cómo harías para que la primitiva sea atómica?
 
 → `02-reloj/`
+
+---
+
+**Nota para el alumno**: las respuestas a las preguntas teóricas deben
+incluirse como comentarios al final del archivo `.go` de implementación, en un
+bloque encabezado con `// === PREGUNTAS TEÓRICAS ===`.

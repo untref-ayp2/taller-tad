@@ -105,3 +105,9 @@ Implementar dos funciones que construyan árboles específicos y devuelvan su al
 - ¿Qué complejidad tienen las operaciones de búsqueda, inserción y eliminación en cada caso?
 
 → `02-altura/`
+
+---
+
+**Nota para el alumno**: las respuestas a las preguntas teóricas deben
+incluirse como comentarios al final del archivo `.go` de implementación, en un
+bloque encabezado con `// === PREGUNTAS TEÓRICAS ===`.
