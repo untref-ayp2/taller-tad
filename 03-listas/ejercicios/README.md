@@ -2,33 +2,15 @@
 
 Antes de comenzar, implementá las cuatro variantes de lista en `data-structures/`:
 `SinglyLinkedList`, `DoublyLinkedList`, `CircularLinkedList` y `SentinelLinkedList`.
+También completá `ListStack[T]` y `ListQueue[T]` en `data-structures/stack` y
+`data-structures/queue` (pila y cola basadas en lista).
 
 Completá las siguientes funciones y tipos en este repositorio (`taller-tad`),
 usando las listas que implementaste en `data-structures`.
 
 ---
 
-## 1. StackList
-
-Implementar una pila (`Stack[T]`) usando internamente `SinglyLinkedList[T]`. La
-pila debe respetar la interfaz `Stack[T]` definida en
-`github.com/untref-ayp2/data-structures/stack`.
-
-El tipo debe llamarse `StackList[T]` y su constructor `NewStackList[T]()`.
-
----
-
-## 2. QueueList
-
-Implementar una cola (`Queue[T]`) usando internamente `SinglyLinkedList[T]`. La
-cola debe respetar la interfaz `Queue[T]` definida en
-`github.com/untref-ayp2/data-structures/queue`.
-
-El tipo debe llamarse `QueueList[T]` y su constructor `NewQueueList[T]()`.
-
----
-
-## 3. InvertirLista
+## 1. InvertirLista
 
 Escribir una función que reciba una `List[T]` y devuelva un slice con los
 elementos en orden inverso.
@@ -41,7 +23,7 @@ Ejemplo: si la lista contiene `[1, 2, 3]`, debe devolver `[3, 2, 1]`.
 
 ---
 
-## 4. MergeListas
+## 2. MergeListas
 
 Escribir una función que dadas dos listas **ordenadas** devuelva una nueva lista
 con los elementos de ambas en orden (merge).
@@ -54,7 +36,7 @@ Ejemplo: `l1 = [1, 3, 5]`, `l2 = [2, 4, 6]` → resultado `[1, 2, 3, 4, 5, 6]`.
 
 ---
 
-## 5. PlaylistCircular
+## 3. PlaylistCircular
 
 Implementar un reproductor de música con repetición (`repeat`) usando una
 `CircularLinkedList`. Debe permitir:
@@ -68,7 +50,7 @@ El tipo debe llamarse `Playlist` y su constructor `NewPlaylist()`.
 
 ---
 
-## 6. Josephus
+## 4. Josephus
 
 Resolver el [problema de
 Josephus](https://es.wikipedia.org/wiki/Problema_de_Flavio_Josefo) usando una
@@ -85,7 +67,7 @@ Ejemplo: `Josephus(7, 3)` debe devolver `4`.
 
 ---
 
-## 7. UndoRedo
+## 5. UndoRedo
 
 Implementar un historial de acciones con deshacer/rehacer usando una
 `DoublyLinkedList`. Debe permitir:
