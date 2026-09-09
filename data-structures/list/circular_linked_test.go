@@ -164,6 +164,34 @@ func TestCircularLinkedListRemoveNonExistent(t *testing.T) {
 	}
 }
 
+func TestCircularLinkedListRemoveSingleElement(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(1)
+	if !l.Remove(1) {
+		t.Error("Remove(1): esperaba true")
+	}
+	if !l.IsEmpty() {
+		t.Error("IsEmpty(): esperaba true tras eliminar el único elemento")
+	}
+	if l.Size() != 0 {
+		t.Errorf("Size(): esperaba 0, obtuvo %d", l.Size())
+	}
+	if _, ok := l.Head(); ok {
+		t.Error("Head(): esperaba false en lista vacía")
+	}
+}
+
+func TestCircularLinkedListRemoveSingleElementMismatch(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(1)
+	if l.Remove(99) {
+		t.Error("Remove(99): esperaba false si el único valor no coincide")
+	}
+	if l.Size() != 1 {
+		t.Errorf("Size(): esperaba 1, obtuvo %d", l.Size())
+	}
+}
+
 func TestCircularLinkedListContains(t *testing.T) {
 	l := NewCircularLinkedList[int]()
 	l.Append(10)

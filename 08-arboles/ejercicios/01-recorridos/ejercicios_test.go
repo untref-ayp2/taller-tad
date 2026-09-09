@@ -20,22 +20,22 @@ func buildExampleTree() *tree.TreeNode[string] {
 	root := tree.NewTreeNode("+")
 
 	a := tree.NewTreeNode("a")
-	root.SetLeft(a)
+	root.Left = a
 
 	star := tree.NewTreeNode("*")
-	root.SetRight(star)
+	root.Right = star
 
 	minus := tree.NewTreeNode("−")
-	star.SetLeft(minus)
+	star.Left = minus
 
 	d := tree.NewTreeNode("d")
-	star.SetRight(d)
+	star.Right = d
 
 	b := tree.NewTreeNode("b")
-	minus.SetLeft(b)
+	minus.Left = b
 
 	c := tree.NewTreeNode("c")
-	minus.SetRight(c)
+	minus.Right = c
 
 	return root
 }

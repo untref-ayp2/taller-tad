@@ -6,8 +6,8 @@ Algoritmos y Programación II.
 ## Estructura
 
 ```
-stack/       # interface Stack[T] + SliceStack[T] + StackList[T] + tests
-queue/       # interface Queue[T] + SliceQueue[T] + QueueList[T] + tests
+stack/       # interface Stack[T] + SliceStack[T] + ListStack[T] + tests
+queue/       # interface Queue[T] + SliceQueue[T] + ListQueue[T] + tests
 list/        # interface List[T] + SinglyLinkedList + DoublyLinkedList +
              #   SentinelLinkedList + CircularLinkedList + tests
 bitmap/      # BitMap (8/32/64 bits) + tests
