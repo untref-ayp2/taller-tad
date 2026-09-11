@@ -84,3 +84,19 @@ func (l *CircularLinkedList[T]) String() string {
 	// Completar
 	return ""
 }
+
+//// Se agregan primitivas Exclusivas para la lista circular
+
+// Rota la lista hacia la izquierda n posiciones. Es decir,
+// el puntero a la cabeza de la lista se mueve n posiciones
+// en el sentido de next
+func (l *CircularLinkedList[T]) RotateLef(n int) {
+	// Completar
+}
+
+// Rota la lista hacia la derecha n posiciones. Es decir,
+// el puntero a la cabeza de la lista se mueve n posiciones
+// en el sentido de prev
+func (l *CircularLinkedList[T]) RotateRight(n int) {
+	// Completar
+}
