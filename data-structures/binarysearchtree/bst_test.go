@@ -90,13 +90,13 @@ func TestDeleteTwoChildren(t *testing.T) {
 
 func TestHeight(t *testing.T) {
 	bst := NewBinarySearchTree[int](cmp.Compare[int])
-	if bst.Height() != 0 {
-		t.Error("Árbol vacío debería tener altura 0")
+	if bst.Height() != -1 {
+		t.Error("Árbol vacío debería tener altura -1")
 	}
 
 	bst.Insert(5)
-	if bst.Height() != 1 {
-		t.Errorf("Altura esperada: 1, obtenida: %d", bst.Height())
+	if bst.Height() != 0 {
+		t.Errorf("Altura esperada: 0, obtenida: %d", bst.Height())
 	}
 
 	bst.Insert(3)
@@ -105,8 +105,8 @@ func TestHeight(t *testing.T) {
 	bst.Insert(4)
 	bst.Insert(6)
 	bst.Insert(8)
-	if bst.Height() != 3 {
-		t.Errorf("Altura esperada: 3, obtenida: %d", bst.Height())
+	if bst.Height() != 2 {
+		t.Errorf("Altura esperada: 2, obtenida: %d", bst.Height())
 	}
 }
 

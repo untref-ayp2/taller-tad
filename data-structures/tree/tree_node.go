@@ -20,6 +20,7 @@ func (n *TreeNode[T]) IsLeaf() bool {
 }
 
 // Height devuelve la altura del subárbol que tiene a este nodo como raíz.
+// Un nodo nil (subárbol vacío) tiene altura -1; una hoja, altura 0.
 func (n *TreeNode[T]) Height() int {
 	// Completar
 	return 0

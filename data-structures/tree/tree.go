@@ -12,6 +12,7 @@ func NewBinaryTree[T any]() *BinaryTree[T] {
 }
 
 // Height devuelve la altura del árbol.
+// Un árbol vacío (raíz nil) tiene altura -1.
 func (bt *BinaryTree[T]) Height() int {
 	// Completar
 	return 0

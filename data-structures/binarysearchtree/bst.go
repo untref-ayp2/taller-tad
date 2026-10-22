@@ -35,6 +35,7 @@ func (bst *BinarySearchTree[T]) Delete(value T) {
 }
 
 // Height devuelve la altura del árbol.
+// Un árbol vacío tiene altura -1.
 func (bst *BinarySearchTree[T]) Height() int {
 	// Completar
 	return 0

@@ -22,13 +22,13 @@ func TestNewBinaryTree(t *testing.T) {
 
 func TestHeight(t *testing.T) {
 	bt := NewBinaryTree[int]()
-	if bt.Height() != 0 {
-		t.Error("Árbol vacío debería tener altura 0")
+	if bt.Height() != -1 {
+		t.Error("Árbol vacío debería tener altura -1")
 	}
 
 	bt = buildTree()
-	if bt.Height() != 2 {
-		t.Errorf("Altura esperada: 2, obtenida: %d", bt.Height())
+	if bt.Height() != 1 {
+		t.Errorf("Altura esperada: 1, obtenida: %d", bt.Height())
 	}
 }
 
@@ -102,8 +102,8 @@ func TestEmptyTreeTraversals(t *testing.T) {
 func TestSingleNode(t *testing.T) {
 	bt := NewBinaryTree[int]()
 	bt.Root = &TreeNode[int]{Value: 42}
-	if bt.Height() != 1 {
-		t.Errorf("Altura esperada: 1, obtenida: %d", bt.Height())
+	if bt.Height() != 0 {
+		t.Errorf("Altura esperada: 0, obtenida: %d", bt.Height())
 	}
 	if bt.Size() != 1 {
 		t.Errorf("Size esperado: 1, obtenido: %d", bt.Size())
@@ -121,8 +121,8 @@ func TestUnbalancedTree(t *testing.T) {
 	bt.Root.Right.Right = &TreeNode[int]{Value: 3}
 	bt.Root.Right.Right.Right = &TreeNode[int]{Value: 4}
 
-	if bt.Height() != 4 {
-		t.Errorf("Altura esperada: 4, obtenida: %d", bt.Height())
+	if bt.Height() != 3 {
+		t.Errorf("Altura esperada: 3, obtenida: %d", bt.Height())
 	}
 	if bt.Size() != 4 {
 		t.Errorf("Size esperado: 4, obtenido: %d", bt.Size())
