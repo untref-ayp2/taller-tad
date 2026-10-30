@@ -84,3 +84,17 @@ func (l *CircularLinkedList[T]) String() string {
 	// Completar
 	return ""
 }
+
+//// Se agregan primitivas Exclusivas para la lista circular
+
+// Forward avanza la cabeza n posiciones en el sentido de next
+// (hacia adelante). Si n <= 0, no hace nada.
+func (l *CircularLinkedList[T]) Forward(n int) {
+	// Completar
+}
+
+// Backward retrocede la cabeza n posiciones en el sentido de prev
+// (hacia atrás). Si n <= 0, no hace nada.
+func (l *CircularLinkedList[T]) Backward(n int) {
+	// Completar
+}

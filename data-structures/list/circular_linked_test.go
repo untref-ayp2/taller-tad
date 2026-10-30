@@ -344,3 +344,171 @@ func TestCircularLinkedListReuseAfterClear(t *testing.T) {
 	}
 	checkHeadTail(t, l, 3, 4)
 }
+
+func TestCircularLinkedListForward(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(1)
+	l.Append(2)
+	l.Append(3)
+	l.Append(4)
+	l.Forward(1)
+	if got := l.Values(); len(got) != 4 || got[0] != 2 || got[1] != 3 || got[2] != 4 || got[3] != 1 {
+		t.Errorf("Forward(1): esperaba [2 3 4 1], obtuvo %v", got)
+	}
+	checkHeadTail(t, l, 2, 1)
+}
+
+func TestCircularLinkedListForwardTwo(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(1)
+	l.Append(2)
+	l.Append(3)
+	l.Append(4)
+	l.Forward(2)
+	if got := l.Values(); len(got) != 4 || got[0] != 3 || got[1] != 4 || got[2] != 1 || got[3] != 2 {
+		t.Errorf("Forward(2): esperaba [3 4 1 2], obtuvo %v", got)
+	}
+	checkHeadTail(t, l, 3, 2)
+}
+
+func TestCircularLinkedListForwardFullCycle(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(1)
+	l.Append(2)
+	l.Append(3)
+	l.Append(4)
+	l.Forward(4)
+	if got := l.Values(); len(got) != 4 || got[0] != 1 {
+		t.Errorf("Forward(4): esperaba [1 2 3 4], obtuvo %v", got)
+	}
+	checkHeadTail(t, l, 1, 4)
+}
+
+func TestCircularLinkedListForwardOverflow(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(1)
+	l.Append(2)
+	l.Append(3)
+	l.Append(4)
+	l.Forward(6)
+	if got := l.Values(); len(got) != 4 || got[0] != 3 || got[1] != 4 || got[2] != 1 || got[3] != 2 {
+		t.Errorf("Forward(6): esperaba [3 4 1 2], obtuvo %v", got)
+	}
+}
+
+func TestCircularLinkedListForwardNonPositive(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(1)
+	l.Append(2)
+	l.Append(3)
+	l.Forward(0)
+	if got := l.Values(); len(got) != 3 || got[0] != 1 {
+		t.Errorf("Forward(0): esperaba [1 2 3], obtuvo %v", got)
+	}
+	l.Forward(-2)
+	if got := l.Values(); len(got) != 3 || got[0] != 1 {
+		t.Errorf("Forward(-2): esperaba [1 2 3], obtuvo %v", got)
+	}
+}
+
+func TestCircularLinkedListForwardEmpty(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Forward(3)
+	if !l.IsEmpty() {
+		t.Error("Forward(3): esperaba lista vacía intacta")
+	}
+}
+
+func TestCircularLinkedListForwardSingleElement(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(42)
+	l.Forward(5)
+	checkHeadTail(t, l, 42, 42)
+	if l.Size() != 1 {
+		t.Errorf("Size(): esperaba 1, obtuvo %d", l.Size())
+	}
+}
+
+func TestCircularLinkedListBackward(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(1)
+	l.Append(2)
+	l.Append(3)
+	l.Append(4)
+	l.Backward(1)
+	if got := l.Values(); len(got) != 4 || got[0] != 4 || got[1] != 1 || got[2] != 2 || got[3] != 3 {
+		t.Errorf("Backward(1): esperaba [4 1 2 3], obtuvo %v", got)
+	}
+	checkHeadTail(t, l, 4, 3)
+}
+
+func TestCircularLinkedListBackwardTwo(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(1)
+	l.Append(2)
+	l.Append(3)
+	l.Append(4)
+	l.Backward(2)
+	if got := l.Values(); len(got) != 4 || got[0] != 3 || got[1] != 4 || got[2] != 1 || got[3] != 2 {
+		t.Errorf("Backward(2): esperaba [3 4 1 2], obtuvo %v", got)
+	}
+	checkHeadTail(t, l, 3, 2)
+}
+
+func TestCircularLinkedListBackwardFullCycle(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(1)
+	l.Append(2)
+	l.Append(3)
+	l.Append(4)
+	l.Backward(4)
+	if got := l.Values(); len(got) != 4 || got[0] != 1 {
+		t.Errorf("Backward(4): esperaba [1 2 3 4], obtuvo %v", got)
+	}
+	checkHeadTail(t, l, 1, 4)
+}
+
+func TestCircularLinkedListBackwardOverflow(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(1)
+	l.Append(2)
+	l.Append(3)
+	l.Append(4)
+	l.Backward(6)
+	if got := l.Values(); len(got) != 4 || got[0] != 3 || got[1] != 4 || got[2] != 1 || got[3] != 2 {
+		t.Errorf("Backward(6): esperaba [3 4 1 2], obtuvo %v", got)
+	}
+}
+
+func TestCircularLinkedListBackwardNonPositive(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(1)
+	l.Append(2)
+	l.Append(3)
+	l.Backward(0)
+	if got := l.Values(); len(got) != 3 || got[0] != 1 {
+		t.Errorf("Backward(0): esperaba [1 2 3], obtuvo %v", got)
+	}
+	l.Backward(-1)
+	if got := l.Values(); len(got) != 3 || got[0] != 1 {
+		t.Errorf("Backward(-1): esperaba [1 2 3], obtuvo %v", got)
+	}
+}
+
+func TestCircularLinkedListBackwardEmpty(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Backward(3)
+	if !l.IsEmpty() {
+		t.Error("Backward(3): esperaba lista vacía intacta")
+	}
+}
+
+func TestCircularLinkedListBackwardSingleElement(t *testing.T) {
+	l := NewCircularLinkedList[int]()
+	l.Append(42)
+	l.Backward(5)
+	checkHeadTail(t, l, 42, 42)
+	if l.Size() != 1 {
+		t.Errorf("Size(): esperaba 1, obtuvo %d", l.Size())
+	}
+}
