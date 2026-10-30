@@ -113,5 +113,5 @@ No necesitás clonarlo aparte. El `replace` en el `go.mod` apunta a `./data-stru
 ## Requisitos
 
 - Go 1.22 o superior.
-- Opcional: golangci-lint (https://golangci-lint.run/) para verificar estilo
+- Opcional: golangci-lint v2 (https://golangci-lint.run/) para verificar estilo
   localmente.

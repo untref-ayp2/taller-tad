@@ -35,7 +35,7 @@ fork. La convención de nombres varía según el paquete:
 ## Requisitos
 
 - Go 1.22 o superior
-- Opcional: [golangci-lint](https://golangci-lint.run/) para linting local
+- Opcional: [golangci-lint v2](https://golangci-lint.run/) para linting local
 
 ## Cómo usar
 
@@ -68,7 +68,7 @@ Para ejecutar los tests de un paquete específico:
 make test-pkg PKG=stack/
 ```
 
-Para ejecutar el linter (si tenés golangci-lint instalado):
+Para ejecutar el linter (requiere golangci-lint v2):
 
 ```bash
 make lint
